@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <%-include('partials/bootstrap.ejs')-%>
+</head>
+<body>
+
+    <div class="container">
+        <form action="/tasks/add" method="POST" class="form-group">
+            <h2 class="text-center">Add Task</h2>
+             <label for="description">Desription</label>
+             <input type="text" name="description" id="description" required class="form-control">
+             <label for="status">Status</label>
+             <input type="text" name="status" id="status" required class="form-control">
+             <br>
+             <button type="submit" class="btn btn-primary">Add</button>
+             <a href="/dashboard" class="btn btn-warning">Cancel</a>
+        </form>
+    </div>
+    
+</body>
+</html>
